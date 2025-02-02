@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 
-import pageKeys from "../_constants/pageKeys";
+import pageKeys from "../../_constants/pageKeys";
 
 import { title } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";

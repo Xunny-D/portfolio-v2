@@ -6,7 +6,7 @@ import backgroundImageOther from "../resources/pictures/neonPurple.jpg";
 import { Head } from "./head";
 
 import { Navbar } from "@/components/navigationBar/navbar";
-import pageKeys from "@/pages/_constants/pageKeys";
+import pageKeys from "@/_constants/pageKeys";
 
 export default function DefaultLayout({ children }: { children: ReactNode }) {
   const [isBgLoaded, setIsBgLoaded] = useState(false);
