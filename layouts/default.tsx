@@ -1,33 +1,30 @@
 import { useState, useEffect, ReactNode, isValidElement } from "react";
 
+import backgroundImageHome from "../resources/pictures/portfolioBackground.jpg";
+import backgroundImageOther from "../resources/pictures/neonPurple.jpg";
+
 import { Head } from "./head";
 
 import { Navbar } from "@/components/navigationBar/navbar";
-import backgroundImageHome from "../resources/pictures/portfolioBackground.jpg";
-import backgroundImageOther from "../resources/pictures/neonPurple.jpg";
 import pageKeys from "@/pages/_constants/pageKeys";
 
-export default function DefaultLayout({
-  children,
-}: {
-  children: ReactNode;
-}) {
-
+export default function DefaultLayout({ children }: { children: ReactNode }) {
   const [isBgLoaded, setIsBgLoaded] = useState(false);
-  const [pageBackground, setPageBackground] = useState('');
+  const [pageBackground, setPageBackground] = useState("");
 
   const totalImages = 2;
   let imagesLoaded = 0;
   const handleImageLoad = () => {
     imagesLoaded += 1;
     if (imagesLoaded === totalImages) {
-    setIsBgLoaded(true);
+      setIsBgLoaded(true);
     }
   };
 
   useEffect(() => {
     const imgOne = new Image();
     const imgTwo = new Image();
+
     imgOne.src = backgroundImageHome.src;
     imgTwo.src = backgroundImageOther.src;
     imgOne.onload = handleImageLoad;
@@ -38,14 +35,20 @@ export default function DefaultLayout({
         case pageKeys.mainPage:
           setPageBackground("bg-hello bg-bottom bg-cover");
           break;
-          case pageKeys.portfolioPage:
-            setPageBackground("bg-open bg-[left_50%_top_5vh] bg-no-repeat bg-cover bg-zoom-out-2x");
+        case pageKeys.portfolioPage:
+          setPageBackground(
+            "bg-open bg-[left_50%_top_5vh] bg-no-repeat bg-cover bg-zoom-out-2x",
+          );
           break;
         case pageKeys.servicesPage:
-          setPageBackground("bg-forHire bg-[#090a0c] bg-[center_-60px] bg-no-repeat bg-cover bg-zoom-out");
+          setPageBackground(
+            "bg-forHire bg-[#090a0c] bg-[center_-60px] bg-no-repeat bg-cover bg-zoom-out",
+          );
           break;
         case pageKeys.aboutPage:
-          setPageBackground("bg-preciousTime bg-[left_25%_bottom_10vh] bg-zoom-out bg-no-repeat bg-cover");
+          setPageBackground(
+            "bg-preciousTime bg-[left_25%_bottom_10vh] bg-zoom-out bg-no-repeat bg-cover",
+          );
           break;
         default:
           setPageBackground("");
@@ -53,18 +56,21 @@ export default function DefaultLayout({
       }
     }
   }, [children]);
-  
+
   return (
-    isBgLoaded &&
-    <div className="overflow-hidden">
-      <div className={`relative flex flex-col h-screen animate-appearance-in ease-in-out font-fixedsys ${pageBackground}`}>
-        <Head />
-        <Navbar />
-        <main className="container mx-auto max-w-9xl flex-grow pt-16">
-          {children}
-        </main>
-        <footer className="w-full flex items-center justify-center py-3" />
+    isBgLoaded && (
+      <div className="overflow-hidden">
+        <div
+          className={`relative flex flex-col h-screen animate-appearance-in ease-in-out font-fixedsys ${pageBackground}`}
+        >
+          <Head />
+          <Navbar />
+          <main className="container mx-auto max-w-9xl flex-grow pt-16">
+            {children}
+          </main>
+          <footer className="w-full flex items-center justify-center py-3" />
+        </div>
       </div>
-    </div>
+    )
   );
 }

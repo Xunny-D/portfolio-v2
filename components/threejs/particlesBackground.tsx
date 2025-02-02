@@ -1,10 +1,10 @@
 import * as THREE from "three";
 import { useEffect, useRef } from "react";
+
 import particleImage from "./ParticleGeneralOne.jpg";
 
 //https://threejs.org/docs/index.html#manual/en/introduction/WebGL-compatibility-check
 // Check if webGL is compatible, add check in this file
-
 
 export default function ParticlesBackground() {
   const mountRef = useRef<HTMLDivElement>(null);
@@ -16,7 +16,7 @@ export default function ParticlesBackground() {
       75,
       window.innerWidth / window.innerHeight,
       0.1,
-      1000
+      1000,
     );
     const renderer = new THREE.WebGLRenderer();
 
@@ -35,7 +35,7 @@ export default function ParticlesBackground() {
 
     particlesGeometry.setAttribute(
       "position",
-      new THREE.BufferAttribute(positions, 3)
+      new THREE.BufferAttribute(positions, 3),
     );
 
     const loader = new THREE.TextureLoader();
@@ -45,8 +45,8 @@ export default function ParticlesBackground() {
       size: 0.03,
       map: texture,
       transparent: true, // Makes particles transparent
-      alphaTest: 0.5,    // Discards fully transparent pixels
-      sizeAttenuation: true
+      alphaTest: 0.5, // Discards fully transparent pixels
+      sizeAttenuation: true,
     });
 
     const particles = new THREE.Points(particlesGeometry, particlesMaterial);
@@ -56,11 +56,11 @@ export default function ParticlesBackground() {
     camera.position.z = 5;
 
     const animate = () => {
-        requestAnimationFrame(animate);
-        renderer.render(scene, camera);
-      };
-  
-      animate();
+      requestAnimationFrame(animate);
+      renderer.render(scene, camera);
+    };
+
+    animate();
 
     // // Animation loop
     // const animate = () => {
@@ -78,9 +78,5 @@ export default function ParticlesBackground() {
     };
   }, []);
 
-  return (
-    
-      <div ref={mountRef} />
-    
-  );
+  return <div ref={mountRef} />;
 }

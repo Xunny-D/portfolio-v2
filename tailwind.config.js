@@ -7,15 +7,15 @@ module.exports = {
   plugins: [
     plugin(function ({ addUtilities, theme }) {
       const newUtilities = {};
-      const animationDelays = theme('animationDelay');
+      const animationDelays = theme("animationDelay");
 
-      Object.keys(animationDelays).forEach(key => {
+      Object.keys(animationDelays).forEach((key) => {
         newUtilities[`.animate-delay-${key}`] = {
           animationDelay: animationDelays[key],
         };
       });
 
-      addUtilities(newUtilities, ['responsive', 'hover']);
+      addUtilities(newUtilities, ["responsive", "hover"]);
     }),
     heroui({
       defaultTheme: "dark", // default theme from the themes object
@@ -64,12 +64,12 @@ module.exports = {
         "20s": "20s",
       },
       animationDelay: {
-        '0s': '0s',
-        '1s': '1s',
-        '2s': '2s',
-        '3s': '3s',
-        '4s': '4s',
-        '5s': '5s',
+        "0s": "0s",
+        "1s": "1s",
+        "2s": "2s",
+        "3s": "3s",
+        "4s": "4s",
+        "5s": "5s",
       },
       animation: {
         fadeIn: "fadeIn 1s forwards ease-in",

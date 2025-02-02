@@ -1,7 +1,9 @@
+import { Fragment } from "react";
+
+import pageKeys from "../_constants/pageKeys";
+
 import { title } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
-import pageKeys from "../_constants/pageKeys";
-import { Fragment } from "react";
 
 export default function DocsPage() {
   return (
