@@ -9,7 +9,9 @@ export default function DocsPage() {
  
   return (
     <DefaultLayout>
-      Test
+      <>
+        test
+      </>
     </DefaultLayout>
   );
 }

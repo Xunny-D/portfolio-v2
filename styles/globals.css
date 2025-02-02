@@ -2,6 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+.bg-zoom-out {
+    background-size: 50%; /* Adjust the percentage to zoom out */
+  }
+
+.bg-zoom-out-2x {
+    background-size: 25%; /* Adjust the percentage to zoom in */
+  }
+
+.mask-linear-edge {
+    mask-image: linear-gradient(
+        to right,
+        transparent 20%,
+        black 40%,
+        black 60%,
+        transparent 80%
+    ),
+    linear-gradient(
+        to bottom,
+        transparent 20%,
+        black 40%,
+        black 60%,
+        transparent 80%
+    );
+}
+
+.glow-text {
+    background: linear-gradient(45deg, #eb32a4, #eb3fa9);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 8px #eb32a4, 0 0 16px #eb3fa9;
+  }
+
 @font-face {
     font-family: 'valorax';
     src: url('../resources/fonts/valorax.ttf');
@@ -18,7 +51,7 @@
 
   @font-face {
     font-family: 'fixedsys';
-    src: url('../resources/fonts/fixedfixedsys-extended-fs.ttf');
+    src: url('../resources/fonts/fixedsys.ttf');
     font-weight: normal;
     font-style: normal;
   }

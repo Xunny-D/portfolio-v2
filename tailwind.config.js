@@ -1,19 +1,32 @@
-import {heroui} from "@heroui/theme"
+import { heroui } from "@heroui/theme";
+
+const plugin = require("tailwindcss/plugin");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  plugins: [heroui({
-    defaultTheme: "dark", // default theme from the themes object
-    themes:{
+  plugins: [
+    plugin(function ({ addUtilities, theme }) {
+      const newUtilities = {};
+      const animationDelays = theme('animationDelay');
 
-  }
-    }
-  )],
+      Object.keys(animationDelays).forEach(key => {
+        newUtilities[`.animate-delay-${key}`] = {
+          animationDelay: animationDelays[key],
+        };
+      });
+
+      addUtilities(newUtilities, ['responsive', 'hover']);
+    }),
+    heroui({
+      defaultTheme: "dark", // default theme from the themes object
+      themes: {},
+    }),
+  ],
   content: [
-    './layouts/**/*.{js,ts,jsx,tsx,mdx}',
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}"
+    "./layouts/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -25,10 +38,16 @@ module.exports = {
         fixedsys: ["fixedsys"],
       },
       backgroundImage: {
-        "defaultCyberPunk": "url('../resources/pictures/portfolioBackground.jpg')",
-        "neonTriangles": "url('../resources/pictures/neonTriangles.jpg')",
-        "neonRain": "url('../resources/pictures/neonRain.jpg')",
-        "hello": "url('../resources/pictures/hello.jpg')",
+        defaultCyberPunk:
+          "url('../resources/pictures/portfolioBackground.jpg')",
+        neonTriangles: "url('../resources/pictures/neonTriangles.jpg')",
+        neonRain: "url('../resources/pictures/neonRain.jpg')",
+        hello: "url('../resources/pictures/hello.jpg')",
+        lookingForSign: "url('../resources/pictures/lookingForSign.jpg')",
+        open: "url('../resources/pictures/open.PNG')",
+        forHire: "url('../resources/pictures/forHire.jpg')",
+        preciousTime: "url('../resources/pictures/preciousTime.jpg')",
+        neonPurple: "url('../resources/pictures/neonPurple.jpg')",
       },
       transitionProperty: {
         "max-height": "max-height",
@@ -44,15 +63,23 @@ module.exports = {
         "15s": "15s",
         "20s": "20s",
       },
+      animationDelay: {
+        '0s': '0s',
+        '1s': '1s',
+        '2s': '2s',
+        '3s': '3s',
+        '4s': '4s',
+        '5s': '5s',
+      },
       animation: {
         fadeIn: "fadeIn 1s forwards ease-in",
         transitionToRight: "transitionToRight 1s forwards",
         transitionFromTop: "transitionFromTop 1s forwards fadein ease-in-out",
         transitionFromBottom: "transitionFromBottom 1s forwards",
         fadeOut: "fadeOut 1s forwards ease-in-out",
-        typewriter: 'typewriter 4s steps(40, end) 1s 1 normal both, blinkCursor 0.75s step-end infinite',
-        blinkCursor: 'blinkCursor 0.75s step-end infinite',
-
+        typewriter:
+          "typewriter 4s steps(40, end) 1s 1 normal both, blinkCursor 0.75s step-end infinite",
+        blinkCursor: "blinkCursor 0.75s step-end infinite",
       },
       keyframes: {
         fadeIn: {
@@ -76,21 +103,20 @@ module.exports = {
           "100%": { transform: "translateY(0)", opacity: 1 },
         },
         fadeOut: {
-          "0%": { opacity: 1    },
+          "0%": { opacity: 1 },
           "100%": { opacity: 0 },
         },
         typewriter: {
-          '0%': { width: '0', visibility: 'hidden' },
-          '0.1%': { visibility: 'visible' },
-          '100%': { width: '100%' },
+          "0%": { width: "0", visibility: "hidden" },
+          "0.1%": { visibility: "visible" },
+          "100%": { width: "100%" },
         },
         blinkCursor: {
-          'from, to': { borderRightColor: 'transparent' },
-          '50%': { borderRightColor: 'white' },
+          "from, to": { borderRightColor: "transparent" },
+          "50%": { borderRightColor: "white" },
         },
       },
     },
   },
   darkMode: "class",
-  plugins: [heroui()],
-}
+};

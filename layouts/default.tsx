@@ -1,29 +1,63 @@
-import { useState, useEffect } from "react";
-import { Link } from "@heroui/link";
+import { useState, useEffect, ReactNode, isValidElement } from "react";
 
 import { Head } from "./head";
 
 import { Navbar } from "@/components/navigationBar/navbar";
-import backgroundImage from "../resources/pictures/portfolioBackground.jpg";
+import backgroundImageHome from "../resources/pictures/portfolioBackground.jpg";
+import backgroundImageOther from "../resources/pictures/neonPurple.jpg";
+import pageKeys from "@/pages/_constants/pageKeys";
 
 export default function DefaultLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
 
   const [isBgLoaded, setIsBgLoaded] = useState(false);
+  const [pageBackground, setPageBackground] = useState('');
+
+  const totalImages = 2;
+  let imagesLoaded = 0;
+  const handleImageLoad = () => {
+    imagesLoaded += 1;
+    if (imagesLoaded === totalImages) {
+    setIsBgLoaded(true);
+    }
+  };
 
   useEffect(() => {
-    const img = new Image();
-    img.src = backgroundImage.src;
-    img.onload = () => setIsBgLoaded(true);
-  }, []);
+    const imgOne = new Image();
+    const imgTwo = new Image();
+    imgOne.src = backgroundImageHome.src;
+    imgTwo.src = backgroundImageOther.src;
+    imgOne.onload = handleImageLoad;
+    imgTwo.onload = handleImageLoad;
+
+    if (isValidElement(children)) {
+      switch (children.key) {
+        case pageKeys.mainPage:
+          setPageBackground("bg-hello bg-bottom bg-cover");
+          break;
+          case pageKeys.portfolioPage:
+            setPageBackground("bg-open bg-[left_50%_top_5vh] bg-no-repeat bg-cover bg-zoom-out-2x");
+          break;
+        case pageKeys.servicesPage:
+          setPageBackground("bg-forHire bg-[#090a0c] bg-[center_-60px] bg-no-repeat bg-cover bg-zoom-out");
+          break;
+        case pageKeys.aboutPage:
+          setPageBackground("bg-preciousTime bg-[left_25%_bottom_10vh] bg-zoom-out bg-no-repeat bg-cover");
+          break;
+        default:
+          setPageBackground("");
+          break;
+      }
+    }
+  }, [children]);
   
   return (
     isBgLoaded &&
     <div className="overflow-hidden">
-      <div className="relative flex flex-col h-screen bg-cover bg-[bottom] bg-hello animate-appearance-in ease-in-out font-fixedsys">
+      <div className={`relative flex flex-col h-screen animate-appearance-in ease-in-out font-fixedsys ${pageBackground}`}>
         <Head />
         <Navbar />
         <main className="container mx-auto max-w-9xl flex-grow pt-16">
