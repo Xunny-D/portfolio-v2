@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.text-unset{
+  font-size: unset;
+}
+
 .bg-zoom-out {
   background-size: 50%; /* Adjust the percentage to zoom out */
 }

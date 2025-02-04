@@ -20,7 +20,7 @@ export default function IndexPage() {
             <section
               className={`flex justify-center w-fit fixed top-[69%] left-1/2 transform -translate-x-1/2`}
             >
-              <div className="animate-typewriter ease-in-out overflow-hidden whitespace-nowrap border-r-2 border-slate-300 h-fit">
+              <div className="animate-typewriterSlow ease-in-out overflow-hidden whitespace-nowrap border-r-2 border-slate-300 h-fit">
                 <div className={title() + " text-neutral-300"}>
                   My name is{" "}
                   <span className={title() + " text-[#eb32a4]"}>Danny</span>

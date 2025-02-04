@@ -47,6 +47,7 @@ module.exports = {
         open: "url('../resources/pictures/open.PNG')",
         forHire: "url('../resources/pictures/forHire.jpg')",
         preciousTime: "url('../resources/pictures/preciousTime.jpg')",
+        enjoyToday: "url('../resources/pictures/enjoyToday.JPG')",
         neonPurple: "url('../resources/pictures/neonPurple.jpg')",
       },
       transitionProperty: {
@@ -67,6 +68,7 @@ module.exports = {
         "0s": "0s",
         "1s": "1s",
         "2s": "2s",
+        "2half": "2.5s",
         "3s": "3s",
         "4s": "4s",
         "5s": "5s",
@@ -78,8 +80,10 @@ module.exports = {
         transitionFromBottom: "transitionFromBottom 1s forwards",
         fadeOut: "fadeOut 1s forwards ease-in-out",
         typewriter:
-          "typewriter 4s steps(40, end) 1s 1 normal both, blinkCursor 0.75s step-end infinite",
+          "typewriter 1s steps(40, end) 1s 1 normal both, blinkCursor 0.75s step-end infinite",
+        typewriterSlow: "typewriter 2s steps(19, end) 1s 1 normal both, blinkCursor 0.75s step-end infinite",
         blinkCursor: "blinkCursor 0.75s step-end infinite",
+        "appearance-in-bounce" :  'appearance-in 1s ease-out 4s, appearance-bounce 1s ease-in-out 5s infinite normal',
       },
       keyframes: {
         fadeIn: {
@@ -114,6 +118,14 @@ module.exports = {
         blinkCursor: {
           "from, to": { borderRightColor: "transparent" },
           "50%": { borderRightColor: "white" },
+        },
+        'appearance-in': {
+          '0%': { opacity: '0', transform: 'translateY(-20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        'appearance-bounce': {
+          '0%, 100%': { opacity: '1', transform: 'translateY(0)' },
+          '50%': { opacity: '1', transform: 'translateY(-10px)' },
         },
       },
     },

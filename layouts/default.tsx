@@ -47,7 +47,7 @@ export default function DefaultLayout({ children }: { children: ReactNode }) {
           break;
         case pageKeys.aboutPage:
           setPageBackground(
-            "bg-preciousTime bg-[left_25%_bottom_10vh] bg-zoom-out bg-no-repeat bg-cover",
+            "bg-enjoyToday bg-[center_bottom_30vh] bg-zoom-out bg-no-repeat bg-cover",
           );
           break;
         default:
@@ -59,7 +59,7 @@ export default function DefaultLayout({ children }: { children: ReactNode }) {
 
   return (
     isBgLoaded && (
-      <div className="overflow-hidden">
+      <div>
         <div
           className={`relative flex flex-col h-screen animate-appearance-in ease-in-out font-fixedsys ${pageBackground}`}
         >

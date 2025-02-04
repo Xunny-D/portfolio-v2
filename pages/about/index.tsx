@@ -9,9 +9,16 @@ export default function DocsPage() {
   return (
     <DefaultLayout>
       <Fragment key={pageKeys.aboutPage}>
-        <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-          <div className="inline-block max-w-lg text-center justify-center">
-            <h1 className={title()}>About</h1>
+        <section
+          className={`flex flex-col gap-[15vh] justify-center fixed top-[70%] left-1/2 transform -translate-x-1/2 w-fit`}
+        >
+          <div
+            className={
+              title() +
+              " text-[#f6f6f6] h-fit animate-typewriter ease-in-out overflow-hidden whitespace-nowrap border-r-2 border-slate-300 w-fit"
+            }
+          >
+            ...because life is too short to be a coder who never touches grass
           </div>
         </section>
       </Fragment>

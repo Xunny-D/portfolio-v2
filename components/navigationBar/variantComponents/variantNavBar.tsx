@@ -12,8 +12,22 @@ export const VariantNavBar = extendVariants(Navbar, {
           "absolute",
           "top-[84%]",
           "mx-auto",
+          "animate-transitionFromBottom",
+          "ease-in-out",
         ],
         wrapper: ["flex", "flex-col", "gap-10", "h-fit"],
+      },
+      regular: {
+        base: [
+          "backdrop-filter-none",
+          "bg-transparent",
+          "w-fit",
+          "sticky",
+          "mx-auto",
+          "animate-appearance-in",
+          "ease-in-out",
+        ],
+        wrapper: ["flex", "gap-10", "h-fit", "mt-[2vh]"],
       },
     },
     rotated: {
