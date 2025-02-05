@@ -77,7 +77,7 @@ module.exports = {
         fadeIn: "fadeIn 1s forwards ease-in",
         transitionToRight: "transitionToRight 1s forwards",
         transitionFromTop: "transitionFromTop 1s forwards fadein ease-in-out",
-        transitionFromBottom: "transitionFromBottom 1s forwards",
+        transitionFromBottom: "transitionFromBottom 0.5s forwards",
         fadeOut: "fadeOut 1s forwards ease-in-out",
         typewriter:
           "typewriter 1s steps(40, end) 1s 1 normal both, blinkCursor 0.75s step-end infinite",
@@ -103,7 +103,7 @@ module.exports = {
           "100%": { transform: "translateY(0)" },
         },
         transitionFromBottom: {
-          "0%": { transform: "translateY(120%)", opacity: 0 },
+          "0%": { transform: "translateY(40%)", opacity: 0 },
           "100%": { transform: "translateY(0)", opacity: 1 },
         },
         fadeOut: {

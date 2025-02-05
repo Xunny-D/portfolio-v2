@@ -1,11 +1,12 @@
-import { Fragment } from "react";
+import React, { Fragment } from "react";
 import { useInView } from "react-intersection-observer";
 
 import pageKeys from "../../_constants/pageKeys";
 
 import { title } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
-import { ArrowDownIcon, GolangIcon } from "@/components/icons";
+import { ArrowDownIcon } from "@/components/icons";
+import DevKitIcons from "@/components/portfolio/devKitIcons";
 
 export default function DocsPage() {
   const { ref: ref1, inView: inView1 } = useInView({
@@ -21,7 +22,7 @@ export default function DocsPage() {
   });
 
   const { ref: ref4, inView: inView4 } = useInView({
-    threshold: 1,
+    threshold: 0.1,
   });
 
   return (
@@ -51,15 +52,11 @@ export default function DocsPage() {
           />
         </section>
         <section
+          ref={ref4}
           className={`flex flex-col gap-[4vh] justify-center w-fit mx-auto mt-[30vh]`}
         >
-          <div
-            ref={ref4}
-            className={`${title()} text-[#f6f6f6] h-fit ${inView4 && "animate-typewriter"} ease-in-out overflow-hidden whitespace-nowrap border-r-2 border-slate-300 max-w-fit`}
-          >
-            {inView4 && "My Dev Toolkit:"}
-          </div>
-          <GolangIcon className="mx-auto" />
+          <DevKitIcons />
+
           <div className="mt-[100vh]">test</div>
         </section>
       </Fragment>
