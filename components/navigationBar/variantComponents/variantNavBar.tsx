@@ -10,7 +10,7 @@ export const VariantNavBar = extendVariants(Navbar, {
           "bg-transparent",
           "w-fit",
           "absolute",
-          "top-[84%]",
+          "top-[48em]",
           "mx-auto",
           "animate-transitionFromBottom",
           "ease-in-out",
@@ -19,8 +19,6 @@ export const VariantNavBar = extendVariants(Navbar, {
       },
       regular: {
         base: [
-          "backdrop-filter-none",
-          "bg-transparent",
           "w-fit",
           "sticky",
           "mx-auto",

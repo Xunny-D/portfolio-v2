@@ -1,10 +1,9 @@
 import { useState, useEffect, ReactNode, isValidElement } from "react";
 
-import backgroundImageHome from "../resources/pictures/portfolioBackground.jpg";
-import backgroundImageOther from "../resources/pictures/neonPurple.jpg";
-
 import { Head } from "./head";
 
+import backgroundImageHome from "@/public/resources/pictures/portfolioBackground.jpg";
+import backgroundImageOther from "@/public/resources/pictures/neonPurple.jpg";
 import { Navbar } from "@/components/navigationBar/navbar";
 import pageKeys from "@/_constants/pageKeys";
 
@@ -33,21 +32,21 @@ export default function DefaultLayout({ children }: { children: ReactNode }) {
     if (isValidElement(children)) {
       switch (children.key) {
         case pageKeys.mainPage:
-          setPageBackground("bg-hello bg-bottom bg-cover");
+          setPageBackground("bg-hello bg-bottom bg-cover h-screen");
           break;
         case pageKeys.portfolioPage:
           setPageBackground(
-            "bg-open bg-[left_50%_top_5vh] bg-no-repeat bg-cover bg-zoom-out-2x",
+            "bg-open bg-[left_50%_top_5vh] bg-no-repeat bg-cover bg-zoom-out-2x h-fit",
           );
           break;
         case pageKeys.servicesPage:
           setPageBackground(
-            "bg-forHire bg-[#090a0c] bg-[center_-60px] bg-no-repeat bg-cover bg-zoom-out",
+            "bg-forHire bg-[#090a0c] bg-[center_-60px] bg-no-repeat bg-cover bg-zoom-out h-screen",
           );
           break;
         case pageKeys.aboutPage:
           setPageBackground(
-            "bg-enjoyToday bg-[center_bottom_30vh] bg-zoom-out bg-no-repeat bg-cover",
+            "bg-enjoyToday bg-[center_bottom_30vh] bg-zoom-out bg-no-repeat bg-cover h-screen",
           );
           break;
         default:
@@ -61,14 +60,13 @@ export default function DefaultLayout({ children }: { children: ReactNode }) {
     isBgLoaded && (
       <div>
         <div
-          className={`relative flex flex-col h-screen animate-appearance-in ease-in-out font-fixedsys ${pageBackground}`}
+          className={`relative flex flex-col animate-appearance-in ease-in-out font-fixedsys ${pageBackground}`}
         >
           <Head />
           <Navbar />
-          <main className="container mx-auto max-w-9xl flex-grow pt-16">
+          <main className="container mx-auto max-w-9xl flex-grow pt-16 h-fit">
             {children}
           </main>
-          <footer className="w-full flex items-center justify-center py-3" />
         </div>
       </div>
     )

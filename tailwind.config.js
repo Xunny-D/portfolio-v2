@@ -4,6 +4,7 @@ const plugin = require("tailwindcss/plugin");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  mode: 'jit', 
   plugins: [
     plugin(function ({ addUtilities, theme }) {
       const newUtilities = {};
@@ -39,16 +40,16 @@ module.exports = {
       },
       backgroundImage: {
         defaultCyberPunk:
-          "url('../resources/pictures/portfolioBackground.jpg')",
-        neonTriangles: "url('../resources/pictures/neonTriangles.jpg')",
-        neonRain: "url('../resources/pictures/neonRain.jpg')",
-        hello: "url('../resources/pictures/hello.jpg')",
-        lookingForSign: "url('../resources/pictures/lookingForSign.jpg')",
-        open: "url('../resources/pictures/open.PNG')",
-        forHire: "url('../resources/pictures/forHire.jpg')",
-        preciousTime: "url('../resources/pictures/preciousTime.jpg')",
-        enjoyToday: "url('../resources/pictures/enjoyToday.JPG')",
-        neonPurple: "url('../resources/pictures/neonPurple.jpg')",
+          "url('../public/resources/pictures/portfolioBackground.jpg')",
+        neonTriangles: "url('../public/resources/pictures/neonTriangles.jpg')",
+        neonRain: "url('../public/resources/pictures/neonRain.jpg')",
+        hello: "url('../public/resources/pictures/hello.jpg')",
+        lookingForSign: "url('../public/resources/pictures/lookingForSign.jpg')",
+        open: "url('../public/resources/pictures/open.PNG')",
+        forHire: "url('../public/resources/pictures/forHire.jpg')",
+        preciousTime: "url('../public/resources/pictures/preciousTime.jpg')",
+        enjoyToday: "url('../public/resources/pictures/enjoyToday.JPG')",
+        neonPurple: "url('../public/resources/pictures/neonPurple.jpg')",
       },
       transitionProperty: {
         "max-height": "max-height",

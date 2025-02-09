@@ -41,23 +41,29 @@
     0 0 16px #eb3fa9;
 }
 
+@layer components{
+  .text-neon-500{
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 font-extrabold;
+  }
+}
+
 @font-face {
   font-family: "valorax";
-  src: url("../resources/fonts/valorax.ttf");
+  src: url("../public/resources/fonts/valorax.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "astroid";
-  src: url("../resources/fonts/astroid.ttf");
+  src: url("../public/resources/fonts/astroid.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "fixedsys";
-  src: url("../resources/fonts/fixedsys.ttf");
+  src: url("../public/resources/fonts/fixedsys.ttf");
   font-weight: normal;
   font-style: normal;
 }
