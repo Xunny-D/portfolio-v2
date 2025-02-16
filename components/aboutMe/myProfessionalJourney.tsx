@@ -1,0 +1,97 @@
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Image,
+  Divider,
+} from "@heroui/react";
+
+import { title } from "@/components/primitives";
+import UH from "@/public/resources/pictures/UH.png";
+
+interface MyProfessionalJourneyProps {
+  refPropOne: React.Ref<HTMLDivElement>;
+  inViewPropOne: boolean;
+  outerViewRef: boolean;
+}
+
+export default function MyProfessionalJourney({
+  refPropOne,
+  inViewPropOne,
+  outerViewRef,
+}: MyProfessionalJourneyProps) {
+  return (
+    <>
+      <section className="flex flex-col gap-[15vh] h-fit">
+        <div
+          ref={refPropOne}
+          className={` ${inViewPropOne && "animate-transitionFromBottom ease-in-out"}} opacity-0 flex flex-col h-fit gap-[10vw] justify-center`}
+        >
+          <div
+            className={` ${inViewPropOne && "animate-transitionFromBottom ease-in-out"}} opacity-0 ml-[5%] grid grid-cols-6 h-fit`}
+          >
+            <Card className="bg-black h-full col-span-2">
+              <CardHeader className="flex flex-col justify-center gap-[10vh]">
+                <h1
+                  className={`${title()} ${inViewPropOne && "animate-typewriter"} ease-in-out overflow-hidden whitespace-nowrap ${"border-r-2 border-slate-300"} max-w-fit`}
+                  onAnimationEnd={(e) =>
+                    e.currentTarget.classList.remove(
+                      "border-r-2",
+                      "border-slate-300",
+                    )
+                  }
+                >
+                  How it started
+                </h1>
+                <h2 className="text-xl">University of Houston</h2>
+              </CardHeader>
+              <Divider className="bg-default-400" />
+              <Image
+                removeWrapper
+                alt="Card background"
+                className="object-cover w-fit h-full my-[3vh] mx-auto"
+                src={UH.src}
+              />
+              <Divider className="bg-default-400" />
+              <CardFooter className="flex flex-col justify-center gap-[1vh]">
+                <h4>Computer Engineering B.S. (2016-2020)</h4>
+                <h4>Cum Laude (somehow)</h4>
+              </CardFooter>
+            </Card>
+            <Divider
+              className="bg-default-400 mx-[5vw] col-span-1 h-[73%] mt-[66%]"
+              orientation="vertical"
+            />
+            <Card className="bg-black h-full col-span-3">
+              <CardHeader className="flex flex-col justify-center gap-[10vh]">
+                <h1
+                  className={`${title()} ${inViewPropOne && "animate-typewriter animate-delay-2s"} ease-in-out overflow-hidden whitespace-nowrap ${!outerViewRef && "border-r-2 border-slate-300"} max-w-fit mr-[25%]`}
+                >
+                  How it&apos;s going
+                </h1>
+              </CardHeader>
+              <CardBody className=" text-xl">
+                <ul className="px-[1vw] tracking-wider list-disc list-outside flex flex-col h-full justify-evenly mt-[10%]">
+                  <li>Software Engineering for 4 years and counting</li>
+                  <li>
+                    Started off in hardware related topics (Digital Electronics,
+                    FPGAs, Embedded Systems, etc.), but my curiosity led me to
+                    explore pure software applications.
+                  </li>
+                  <li>
+                    My life goal is to always continue my hardware and software
+                    skills, create cool things, and help others.
+                  </li>
+                  <li>
+                    Possible ECE/AI master&apos;s degree in the near future.
+                  </li>
+                </ul>
+              </CardBody>
+            </Card>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

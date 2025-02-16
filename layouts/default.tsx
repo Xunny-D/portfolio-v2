@@ -2,8 +2,7 @@ import { useState, useEffect, ReactNode, isValidElement } from "react";
 
 import { Head } from "./head";
 
-import backgroundImageHome from "@/public/resources/pictures/portfolioBackground.jpg";
-import backgroundImageOther from "@/public/resources/pictures/neonPurple.jpg";
+import backgroundImageHome from "@/public/resources/pictures/hello.jpg";
 import { Navbar } from "@/components/navigationBar/navbar";
 import pageKeys from "@/_constants/pageKeys";
 
@@ -11,7 +10,7 @@ export default function DefaultLayout({ children }: { children: ReactNode }) {
   const [isBgLoaded, setIsBgLoaded] = useState(false);
   const [pageBackground, setPageBackground] = useState("");
 
-  const totalImages = 2;
+  const totalImages = 1;
   let imagesLoaded = 0;
   const handleImageLoad = () => {
     imagesLoaded += 1;
@@ -22,12 +21,9 @@ export default function DefaultLayout({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const imgOne = new Image();
-    const imgTwo = new Image();
 
     imgOne.src = backgroundImageHome.src;
-    imgTwo.src = backgroundImageOther.src;
     imgOne.onload = handleImageLoad;
-    imgTwo.onload = handleImageLoad;
 
     if (isValidElement(children)) {
       switch (children.key) {
@@ -41,12 +37,12 @@ export default function DefaultLayout({ children }: { children: ReactNode }) {
           break;
         case pageKeys.servicesPage:
           setPageBackground(
-            "bg-forHire bg-[#090a0c] bg-[center_-60px] bg-no-repeat bg-cover bg-zoom-out h-screen",
+            "bg-forHire bg-[#090a0c] bg-[center_-60px] bg-no-repeat bg-cover bg-zoom-out h-fit",
           );
           break;
         case pageKeys.aboutPage:
           setPageBackground(
-            "bg-enjoyToday bg-[center_bottom_30vh] bg-zoom-out bg-no-repeat bg-cover h-screen",
+            "bg-enjoyToday bg-[center_bottom_103%] bg-zoom-out bg-no-repeat bg-cover h-fit",
           );
           break;
         default:

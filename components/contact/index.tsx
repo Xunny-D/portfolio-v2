@@ -27,7 +27,12 @@ export default function ContactModal({
           </div>
         </ModalHeader>
         <ModalBody>
-          <Form validationBehavior="native">
+          <Form
+            action="https://formbold.com/s/94EzW"
+            encType="multipart/form-data"
+            method="post"
+            validationBehavior="native"
+          >
             <Input
               isRequired
               errorMessage="Please enter a valid email"
@@ -61,7 +66,14 @@ export default function ContactModal({
               placeholder="Enter your message here!"
               type="text"
             />
-            <Button className="mt-6 mb-2" type="submit" variant="bordered">
+            <Button
+              className="mt-6 mb-2"
+              type="submit"
+              variant="bordered"
+              onPress={() => {
+                // handle form submission
+              }}
+            >
               Submit
             </Button>
           </Form>

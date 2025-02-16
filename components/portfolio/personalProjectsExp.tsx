@@ -39,10 +39,7 @@ export default function PersonalProjectsExp({
           className={` ${inViewPropTwo && "animate-transitionFromBottom ease-in-out"}} opacity-0 mx-auto grid grid-cols-1 gap-[4vw] w-[35vw] p-[4em]`}
         >
           <>
-            <Card
-              isPressable
-              className="border-small border-default-200 hover:shadow-lg hover:shadow-default-500 hover:transition-shadow transition-all ease-in-out will-change-transform"
-            >
+            <Card className="border-small border-default-200 hover:shadow-lg hover:shadow-default-500 hover:transition-shadow transition-all ease-in-out will-change-transform">
               <CardBody className="bg-black w-fit h-fit">
                 <video autoPlay loop muted className="scale-105">
                   <source
@@ -55,10 +52,7 @@ export default function PersonalProjectsExp({
                 <h4 className="font-bold text-large">Portfolio Website V1</h4>
               </CardFooter>
             </Card>
-            <Card
-              isPressable
-              className="bg-black max-h-fit border-small border-default-200 hover:shadow-lg hover:shadow-default-500 hover:transition-shadow transition-all ease-in-out will-change-transform"
-            >
+            <Card className="bg-black max-h-fit border-small border-default-200 hover:shadow-lg hover:shadow-default-500 hover:transition-shadow transition-all ease-in-out will-change-transform">
               <CardBody className="bg-black">
                 <video autoPlay loop muted className="h-[75vh]">
                   <source

@@ -85,6 +85,7 @@ module.exports = {
         typewriterSlow: "typewriter 2s steps(19, end) 1s 1 normal both, blinkCursor 0.75s step-end infinite",
         blinkCursor: "blinkCursor 0.75s step-end infinite",
         "appearance-in-bounce" :  'appearance-in 1s ease-out 4s, appearance-bounce 1s ease-in-out 5s infinite normal',
+        "appearance-in-bounce-delay2s" :  'appearance-in 1s ease-out 2s, appearance-bounce 1s ease-in-out 3s infinite normal',
       },
       keyframes: {
         fadeIn: {

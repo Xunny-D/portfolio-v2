@@ -24,6 +24,7 @@ export const VariantNavBar = extendVariants(Navbar, {
           "mx-auto",
           "animate-appearance-in",
           "ease-in-out",
+          "rounded",
         ],
         wrapper: ["flex", "gap-10", "h-fit", "mt-[2vh]"],
       },

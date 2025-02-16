@@ -35,42 +35,33 @@ export default function ProfessionalWorkExp({
           className={` ${inViewPropTwo && "animate-transitionFromBottom ease-in-out"}} opacity-0 mx-auto grid grid-cols-2 gap-[4vw] w-[30vw] p-[4em]`}
         >
           <>
-            <Card
-              isPressable
-              className="bg-black max-h-fit border-small border-default-200 hover:shadow-lg hover:shadow-default-500 hover:transition-shadow transition-all ease-in-out will-change-transform"
-            >
+            <Card className="bg-black max-h-fit border-small border-default-200 hover:shadow-lg hover:shadow-default-500 hover:transition-shadow transition-all ease-in-out will-change-transform">
               <Image
                 removeWrapper
                 alt="Card background"
                 className="object-scale-down scale-105 z-0 w-full h-full rounded-none"
                 src={avanadePic.src}
               />
-              <CardFooter className="bg-black pb-[1vh] flex flex-col justify-center items-center py-[3vh]">
+              <CardFooter className="bg-black pb-[1vh] flex flex-col justify-center items-center py-[3vh] text-center">
                 <h4 className="font-bold text-medium">
                   Senior Software Analyst
                 </h4>
               </CardFooter>
             </Card>
-            <Card
-              isPressable
-              className="bg-black max-h-fit border-small border-default-200 hover:shadow-lg hover:shadow-default-500 hover:transition-shadow transition-all ease-in-out will-change-transform"
-            >
+            <Card className="bg-black max-h-fit border-small border-default-200 hover:shadow-lg hover:shadow-default-500 hover:transition-shadow transition-all ease-in-out will-change-transform">
               <Image
                 removeWrapper
                 alt="Card background"
                 className="object-scale-down scale-75 bg-black w-full h-full z-0 rounded-none"
                 src={tealLogo.src}
               />
-              <CardFooter className="bg-black pb-[1vh] flex flex-col justify-center items-center py-[3vh]">
+              <CardFooter className="bg-black pb-[1vh] flex flex-col justify-center items-center py-[3vh] text-center">
                 <h4 className="font-bold text-medium">
                   Embedded Software Engineer
                 </h4>
               </CardFooter>
             </Card>
-            <Card
-              isPressable
-              className="bg-black border-small border-default-200 hover:shadow-lg hover:shadow-default-500 hover:transition-shadow transition-all ease-in-out will-change-transform"
-            >
+            <Card className="bg-black border-small border-default-200 hover:shadow-lg hover:shadow-default-500 hover:transition-shadow transition-all ease-in-out will-change-transform">
               <Image
                 removeWrapper
                 alt="Card background"
@@ -80,21 +71,18 @@ export default function ProfessionalWorkExp({
                 }}
                 src={aspenLogo.src}
               />
-              <CardFooter className=" bg-black pb-[1vh] flex flex-col justify-center items-center py-[3vh]">
+              <CardFooter className=" bg-black pb-[1vh] flex flex-col justify-center items-center py-[3vh] text-center">
                 <h4 className="font-bold text-medium">Software Engineer</h4>
               </CardFooter>
             </Card>
-            <Card
-              isPressable
-              className="bg-black max-h-fit border-small border-default-200 hover:shadow-lg hover:shadow-default-500 hover:transition-shadow transition-all ease-in-out will-change-transform"
-            >
+            <Card className="bg-black max-h-fit border-small border-default-200 hover:shadow-lg hover:shadow-default-500 hover:transition-shadow transition-all ease-in-out will-change-transform">
               <Image
                 removeWrapper
                 alt="Card background"
                 className="object-scale-down scale-105 z-0 w-full h-full rounded-none"
                 src={PnnlLogo.src}
               />
-              <CardFooter className="bg-black pb-[1vh] flex flex-col justify-center items-center py-[3vh]">
+              <CardFooter className="bg-black pb-[1vh] flex flex-col justify-center items-center py-[3vh] text-center">
                 <h4 className="font-bold text-medium">Software Engineer II</h4>
               </CardFooter>
             </Card>
