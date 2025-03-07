@@ -23,16 +23,16 @@ export default function ProfessionalWorkExp({
 }: ProfessionalWorkExpProps) {
   return (
     <>
-      <section className="flex flex-col gap-[1vh] justify-center h-fit w-fit mx-auto">
+      <section className="flex flex-col gap-[1vh] h-fit w-fit mx-auto">
         <div
           ref={refPropOne}
-          className={`${title()} mx-auto  ${inViewPropOne && "animate-typewriter"} ease-in-out overflow-hidden whitespace-nowrap ${!outerViewRef && "border-r-2 border-slate-300"} max-w-fit`}
+          className={`${title({ size: "mdSmaller" })} ${inViewPropOne && "animate-typewriter"} ease-in-out overflow-hidden whitespace-nowrap ${!outerViewRef && "border-r-2 border-slate-300"} max-w-fit mx-auto`}
         >
           {inViewPropOne && "Professional Work Experiences"}
         </div>
         <div
           ref={refPropTwo}
-          className={` ${inViewPropTwo && "animate-transitionFromBottom ease-in-out"}} opacity-0 mx-auto grid grid-cols-2 gap-[4vw] w-[30vw] p-[4em]`}
+          className={` ${inViewPropTwo && "animate-transitionFromBottom ease-in-out"}} opacity-0 mx-auto grid grid-cols-2 gap-[4vw] w-fit px-[6vw] py-[6vh] sm:w-[40em] sm:p-[4em]`}
         >
           <>
             <Card className="bg-black max-h-fit border-small border-default-200 hover:shadow-lg hover:shadow-default-500 hover:transition-shadow transition-all ease-in-out will-change-transform">

@@ -4,7 +4,6 @@ import { Spacer, Button, Link } from "@heroui/react";
 
 import pageKeys from "../../_constants/pageKeys";
 
-import { title } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
 import { ArrowDownIcon } from "@/components/icons";
 import DevKitIcons from "@/components/portfolio/devKitIcons";
@@ -77,7 +76,7 @@ export default function DocsPage() {
         >
           <div
             ref={ref1}
-            className={`${title()} text-[#f6f6f6] h-fit ${inView1 && "animate-typewriter"} ease-in-out overflow-hidden whitespace-nowrap border-r-2 border-slate-300 w-fit`}
+            className={`text-3xl sm:text-5xl text-[#f6f6f6] h-fit ${inView1 && "animate-typewriter"} ease-in-out overflow-hidden whitespace-nowrap border-r-2 border-slate-300 max-w-fit mx-auto`}
             onAnimationEnd={(e) =>
               e.currentTarget.classList.remove("border-r-2", "border-slate-300")
             }
@@ -86,7 +85,7 @@ export default function DocsPage() {
           </div>
           <div
             ref={ref2}
-            className={`${title()} text-[#f6f6f6] h-fit ${inView2 && "animate-typewriter"} animate-delay-2half ease-in-out overflow-hidden whitespace-nowrap ${!inView4 && "border-r-2 border-slate-300"} max-w-fit`}
+            className={`text-3xl sm:text-5xl text-[#f6f6f6] h-fit ${inView2 && "animate-typewriter"} animate-delay-2half ease-in-out overflow-hidden whitespace-nowrap ${!inView4 && "border-r-2 border-slate-300"} max-w-fit mx-auto`}
           >
             {inView2 && "Check out my work below"}
           </div>
@@ -97,7 +96,7 @@ export default function DocsPage() {
         </section>
         <section
           ref={ref4}
-          className={`flex flex-col gap-[4vh] justify-center h-fit w-fit mx-auto my-[30vh]`}
+          className={`flex flex-col gap-[4vh] h-fit mx-auto my-[30vh]`}
         >
           <DevKitIcons
             inViewProp={inView5}

@@ -39,10 +39,10 @@ export default function DevKitIcons({
 }: DevKitIconsProps) {
   return (
     <>
-      <section className="flex flex-col gap-[4vh] justify-center h-fit w-fit mx-auto">
+      <section className="flex flex-col gap-[4vh] md:gap-[10vh] h-fit w-fit mx-auto">
         <div
           ref={refProp}
-          className={`${title()} mx-auto text-[#f6f6f6] h-fit ${inViewProp && "animate-typewriter"} ease-in-out overflow-hidden whitespace-nowrap ${!outerViewRef && "border-r-2 border-slate-300"} max-w-fit`}
+          className={`${title()} text-[#f6f6f6] h-fit ${inViewProp && "animate-typewriter"} ease-in-out overflow-hidden whitespace-nowrap ${!outerViewRef && "border-r-2 border-slate-300"} max-w-fit mx-auto`}
         >
           {inViewProp && "My Dev Toolkit:"}
         </div>
@@ -52,42 +52,42 @@ export default function DevKitIcons({
           <div className="flex justify-center gap-[1vw]">
             {inViewProp && (
               <>
-                <JavaScriptIcon className="w-[2vw] h-[4vh]" />
-                <TypeScriptIcon className="w-[2vw] h-[4vh]" />
-                <NextJSIcon className="w-[2vw] h-[4vh]" />
-                <ReactIcon className="w-[2vw] h-[4vh]" />
-                <CSharpIcon className="w-[2vw] h-[4vh]" />
-                <DotNetIcon className="w-[2vw] h-[4vh]" />
-                <GolangIcon className="w-[2vw] h-[4vh]" />
-                <GinIcon className="w-[2vw] h-[4vh]" />
+                <JavaScriptIcon className="w-[8vw] h-[16vh] sm:w-[4vw] sm:h-[8vh]" />
+                <TypeScriptIcon className="w-[8vw] h-[16vh] sm:w-[4vw] sm:h-[8vh]" />
+                <NextJSIcon className="w-[8vw] h-[16vh] sm:w-[4vw] sm:h-[8vh]" />
+                <ReactIcon className="w-[8vw] h-[16vh] sm:w-[4vw] sm:h-[8vh]" />
+                <CSharpIcon className="w-[8vw] h-[16vh] sm:w-[4vw] sm:h-[8vh]" />
+                <DotNetIcon className="w-[8vw] h-[16vh] sm:w-[4vw] sm:h-[8vh]" />
+                <GolangIcon className="w-[8vw] h-[16vh] sm:w-[4vw] sm:h-[8vh]" />
+                <GinIcon className="w-[8vw] h-[16vh] sm:w-[4vw] sm:h-[8vh]" />
               </>
             )}
           </div>
           <div className="flex justify-center gap-[1vw]">
             {inViewProp && (
               <>
-                <NodeJsIcon className="w-[2vw] h-[4vh]" />
-                <ExpressIcon className="w-[2vw] h-[4vh]" />
-                <ThreeJsIcon className="w-[2vw] h-[4vh]" />
-                <NoSQLIcon className="w-[2vw] h-[4vh]" />
-                <SQLServerIcon className="w-[2vw] h-[4vh]" />
-                <TailwindIcon className="w-[2vw] h-[4vh]" />
-                <TensorFlowIcon className="w-[2vw] h-[4vh]" />
-                <PythonIcon className="w-[2vw] h-[4vh]" />
+                <NodeJsIcon className="w-[8vw] h-[16vh] sm:w-[4vw] sm:h-[8vh]" />
+                <ExpressIcon className="w-[8vw] h-[16vh] sm:w-[4vw] sm:h-[8vh]" />
+                <ThreeJsIcon className="w-[8vw] h-[16vh] sm:w-[4vw] sm:h-[8vh]" />
+                <NoSQLIcon className="w-[8vw] h-[16vh] sm:w-[4vw] sm:h-[8vh]" />
+                <SQLServerIcon className="w-[8vw] h-[16vh] sm:w-[4vw] sm:h-[8vh]" />
+                <TailwindIcon className="w-[8vw] h-[16vh] sm:w-[4vw] sm:h-[8vh]" />
+                <TensorFlowIcon className="w-[8vw] h-[16vh] sm:w-[4vw] sm:h-[8vh]" />
+                <PythonIcon className="w-[8vw] h-[16vh] sm:w-[4vw] sm:h-[8vh]" />
               </>
             )}
           </div>
           <div className="flex justify-center gap-[1vw]">
             {inViewProp && (
               <>
-                <JavaIcon className="w-[2vw] h-[4vh]" />
-                <FlutterIcon className="w-[2vw] h-[4vh]" />
-                <GitIcon className="w-[2vw] h-[4vh]" />
-                <AWSIcon className="w-[2vw] h-[4vh]" />
-                <AzureIcon className="w-[2vw] h-[4vh]" />
-                <FreeRtosIcon className="w-[2vw] h-[4vh]" />
-                <CIcon className="w-[2vw] h-[4vh]" />
-                <CPlusPlusIcon className="w-[2vw] h-[4vh]" />
+                <JavaIcon className="w-[8vw] h-[16vh] sm:w-[4vw] sm:h-[8vh]" />
+                <FlutterIcon className="w-[8vw] h-[16vh] sm:w-[4vw] sm:h-[8vh]" />
+                <GitIcon className="w-[8vw] h-[16vh] sm:w-[4vw] sm:h-[8vh]" />
+                <AWSIcon className="w-[8vw] h-[16vh] sm:w-[4vw] sm:h-[8vh]" />
+                <AzureIcon className="w-[8vw] h-[16vh] sm:w-[4vw] sm:h-[8vh]" />
+                <FreeRtosIcon className="w-[8vw] h-[16vh] sm:w-[4vw] sm:h-[8vh]" />
+                <CIcon className="w-[8vw] h-[16vh] sm:w-[4vw] sm:h-[8vh]" />
+                <CPlusPlusIcon className="w-[8vw] h-[16vh] sm:w-[4vw] sm:h-[8vh]" />
               </>
             )}
           </div>

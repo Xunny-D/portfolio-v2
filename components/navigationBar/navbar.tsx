@@ -1,4 +1,10 @@
-import { NavbarContent, NavbarItem } from "@heroui/navbar";
+import {
+  NavbarContent,
+  NavbarItem,
+  NavbarMenu,
+  NavbarMenuToggle,
+  NavbarMenuItem,
+} from "@heroui/navbar";
 import { useState } from "react";
 import { Link } from "@heroui/link";
 import NextLink from "next/link";
@@ -13,6 +19,7 @@ import useScrollNavReposition from "@/hooks/useScrollNavReposition";
 
 export const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const handleCloseModal = () => {
     setIsModalOpen(false);
   };
@@ -22,9 +29,14 @@ export const Navbar = () => {
   const iconMenuGap = navBarDesign === "regular" ? "gap-2" : "gap-8";
 
   return (
-    <VariantNavBar design={navBarDesign}>
+    <VariantNavBar design={navBarDesign} onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent className="basis-1/5 sm:basis-full" justify="center">
-        <div className="hidden lg:flex gap-16 justify-evenly">
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className="sm:hidden pb-[40px]"
+        />
+
+        <div className="hidden sm:flex sm:gap-[6vw] md:gap-16 justify-evenly">
           {siteConfig.navItems.map((item) => (
             <NavbarItem
               key={item.href}
@@ -76,6 +88,41 @@ export const Navbar = () => {
           </Link>
         </NavbarItem>
       </NavbarContent>
+
+      <NavbarMenu className="mt-[2vh]">
+        {siteConfig.navMenuItems.map((item) => (
+          <NavbarMenuItem
+            key={item.href}
+            className="border-b-2 border-slate-300 text-default-500 hover:text-default-900 text-2xl font-fixedsys"
+          >
+            <NextLink
+              className={clsx(
+                "data-[active=true]:text-primary data-[active=true]:font-medium",
+              )}
+              href={item.href}
+            >
+              {item.label}
+            </NextLink>
+          </NavbarMenuItem>
+        ))}
+        <NavbarMenuItem
+          key="/contact"
+          className="border-b-2 border-slate-300 text-default-500 hover:text-default-900 text-2xl font-fixedsys"
+        >
+          <Link
+            className={
+              clsx(
+                "data-[active=true]:text-primary data-[active=true]:font-medium",
+              ) +
+              " text-default-500 hover:text-default-900 text-unset cursor-pointer"
+            }
+            onPress={() => setIsModalOpen(true)}
+          >
+            Contact
+            <ContactModal openModal={isModalOpen} onClose={handleCloseModal} />
+          </Link>
+        </NavbarMenuItem>
+      </NavbarMenu>
     </VariantNavBar>
   );
 };

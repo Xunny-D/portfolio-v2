@@ -25,7 +25,7 @@ export default function MyPersonalLife({
 }: MyPersonalLifeProps) {
   return (
     <>
-      <section className="flex flex-col gap-[6vh] h-fit">
+      <section className="flex flex-col lg:gap-[6vh] h-fit">
         <div
           ref={refPropOne}
           className={`${title()} ${inViewPropOne && "animate-typewriter"} mx-auto ease-in-out overflow-hidden whitespace-nowrap ${"border-r-2 border-slate-300"} max-w-fit`}
@@ -34,11 +34,11 @@ export default function MyPersonalLife({
         </div>
         <div
           ref={refPropTwo}
-          className={` ${inViewPropTwo && "animate-transitionFromBottom ease-in-out"}} opacity-0 grid grid-cols-8 grid-rows-2 h-[80vh] gap-[3em]`}
+          className={` ${inViewPropTwo && "animate-transitionFromBottom ease-in-out"}} opacity-0 grid grid-cols-1 grid-rows-32 lg:grid-cols-8 lg:grid-rows-2 sm:w-[50vw] lg:w-[90vw] lg:h-[100vh] xl:w-[75vw] gap-[3em] px-[10vw] py-[3vh] sm:p-[4em]`}
         >
           <>
             {/* Greenery */}
-            <Card className="bg-black col-span-2">
+            <Card className="bg-black col-span-1 row-span-1 lg:col-span-2">
               <CardHeader className="bg-white/80 top-0 border-t-1 border-zinc-100/50 z-30 absolute flex justify-center">
                 <p className="text-black text-sm">
                   Software Engineer in the wild
@@ -48,11 +48,12 @@ export default function MyPersonalLife({
                 removeWrapper
                 alt="Card background"
                 className="object-cover w-full h-full"
+                loading="lazy"
                 src={greenery.src}
               />
             </Card>
             {/* Creme Brulee */}
-            <Card className="bg-black col-span-2">
+            <Card className="bg-black row-span-1 lg:col-span-2">
               <CardHeader className="bg-white/80 top-0 border-t-1 border-zinc-100/50 z-30 absolute flex justify-center">
                 <p className="text-black text-sm">Me serving guests</p>
               </CardHeader>
@@ -60,11 +61,12 @@ export default function MyPersonalLife({
                 removeWrapper
                 alt="Card background"
                 className="object-scale-down w-full h-full"
+                loading="eager"
                 src={baking.src}
               />
             </Card>
             {/* Pate So */}
-            <Card className="bg-black col-span-2">
+            <Card className="bg-black row-span-1 lg:col-span-2">
               <CardHeader className="bg-white/80 top-0 border-t-1 border-zinc-100/50 z-30 absolute flex justify-center">
                 <p className="text-black text-sm">Vietnamese Bánh Patê Sô</p>
               </CardHeader>
@@ -72,11 +74,12 @@ export default function MyPersonalLife({
                 removeWrapper
                 alt="Card background"
                 className="object-cover w-full h-full"
+                loading="eager"
                 src={patteSo.src}
               />
             </Card>
             {/* Longboard */}
-            <Card className="bg-black col-span-2">
+            <Card className="bg-black row-span-1 lg:col-span-2">
               <CardHeader className="bg-white/80 top-0 border-t-1 border-zinc-100/50 z-30 absolute flex justify-center">
                 <p className="text-black text-sm">My skater boy dreams</p>
               </CardHeader>
@@ -84,15 +87,17 @@ export default function MyPersonalLife({
                 removeWrapper
                 alt="Card background"
                 className="object-cover w-full h-full"
+                loading="eager"
                 src={longBoardingPersonal.src}
               />
             </Card>
             {/* Me and Gf */}
-            <Card className="bg-black col-span-2">
+            <Card className="bg-black row-span-1 lg:col-span-2">
               <Image
                 removeWrapper
                 alt="Card background"
                 className="object-cover w-full h-full"
+                loading="eager"
                 src={meAndGf.src}
               />
               <CardFooter className="bg-white/80 bottom-0 border-t-1 border-zinc-100/50 z-30 absolute flex justify-center">
@@ -100,25 +105,25 @@ export default function MyPersonalLife({
               </CardFooter>
             </Card>
             {/* Gf and cat */}
-            <Card className="bg-black col-span-2">
+            <Card className="bg-black row-span-1 lg:col-span-2">
               <Image
                 removeWrapper
                 alt="Card background"
                 className="object-cover w-full h-full"
+                loading="eager"
                 src={gfCat.src}
               />
               <CardFooter className="bg-white/80 bottom-0 border-t-1 border-zinc-100/50 z-30 absolute flex justify-center">
-                <p className="text-black text-sm">
-                  My girlfriend and our cat
-                </p>
+                <p className="text-black text-sm">My girlfriend and our cat</p>
               </CardFooter>
             </Card>
             {/* Cat hello */}
-            <Card className="bg-black col-span-2">
+            <Card className="bg-black row-span-1 lg:col-span-2">
               <Image
                 removeWrapper
                 alt="Card background"
                 className="object-cover w-full h-full"
+                loading="eager"
                 src={catHello.src}
               />
               <CardFooter className="bg-white/80 bottom-0 border-t-1 border-zinc-100/50 z-30 absolute flex justify-center">
@@ -126,11 +131,12 @@ export default function MyPersonalLife({
               </CardFooter>
             </Card>
             {/* Cat cry */}
-            <Card className="bg-black col-span-2">
+            <Card className="bg-black row-span-1 lg:col-span-2">
               <Image
                 removeWrapper
                 alt="Card background"
                 className="object-cover w-full h-full"
+                loading="eager"
                 src={catCry.src}
               />
               <CardFooter className="bg-white/80 bottom-0 border-t-1 border-zinc-100/50 z-30 absolute flex justify-center">

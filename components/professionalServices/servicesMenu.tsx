@@ -38,7 +38,7 @@ export default function ServicesMenu({
         </div>
         <div
           ref={refPropTwo}
-          className={` ${inViewPropTwo && "animate-transitionFromBottom ease-in-out"}} opacity-0 mx-auto grid grid-cols-2 gap-[4vw] w-fit h-fit p-[4em]`}
+          className={` ${inViewPropTwo && "animate-transitionFromBottom ease-in-out"}} opacity-0 mx-auto grid sm:grid-cols-2 gap-[4vw] w-fit h-fit p-[2em] sm:p-[4em]`}
         >
           <>
             <Card
@@ -53,7 +53,7 @@ export default function ServicesMenu({
                 </h4>
               </CardHeader>
               <Divider className="bg-default-200" />
-              <CardBody className="bg-black w-fit text-lg px-[2vw] h-full overflow-visible">
+              <CardBody className="bg-black w-fit sm:text-lg px-[1em] sm:px-[2vw] h-full overflow-visible">
                 {servicesDescription.landingPageDescription}
               </CardBody>
               <Divider className="bg-default-200" />
@@ -73,7 +73,7 @@ export default function ServicesMenu({
                 </h4>
               </CardHeader>
               <Divider className="bg-default-200" />
-              <CardBody className="bg-black h-full overflow-visible w-fit text-lg px-[2vw]">
+              <CardBody className="bg-black h-full overflow-visible w-fit sm:text-lg px-[1em] sm:px-[2vw]">
                 {servicesDescription.customSoftwareHardwareDescription}
               </CardBody>
               <Divider className="bg-default-200" />

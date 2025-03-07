@@ -30,13 +30,13 @@ export default function PersonalProjectsExp({
       <section className="flex flex-col gap-[1vh] justify-center h-fit w-fit mx-auto">
         <div
           ref={refPropOne}
-          className={`${title()} mx-auto  ${inViewPropOne && "animate-typewriter"} ease-in-out overflow-hidden whitespace-nowrap border-r-2 border-slate-300 max-w-fit`}
+          className={`${title()} ${inViewPropOne && "animate-typewriter"} ease-in-out overflow-hidden whitespace-nowrap border-r-2 border-slate-300 max-w-fit mx-auto`}
         >
           {inViewPropOne && "Personal Projects"}
         </div>
         <div
           ref={refPropTwo}
-          className={` ${inViewPropTwo && "animate-transitionFromBottom ease-in-out"}} opacity-0 mx-auto grid grid-cols-1 gap-[4vw] w-[35vw] p-[4em]`}
+          className={` ${inViewPropTwo && "animate-transitionFromBottom ease-in-out"}} opacity-0 mx-auto grid grid-cols-1 gap-[4vw] px-[6vw] py-[6vh] sm:w-[40em] sm:p-[4em]`}
         >
           <>
             <Card className="border-small border-default-200 hover:shadow-lg hover:shadow-default-500 hover:transition-shadow transition-all ease-in-out will-change-transform">

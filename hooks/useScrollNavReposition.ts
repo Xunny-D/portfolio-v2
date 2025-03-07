@@ -1,18 +1,29 @@
 import { useState, useEffect } from "react";
 
 const useScrollNavReposition = (maxScroll: number = 300) => {
-  const [navVariant, setNavVariant] = useState<"cyberPunk" | "regular">(
-    "cyberPunk",
-  );
+  const [navVariant, setNavVariant] = useState<
+    "cyberPunk" | "regular" | "mobile"
+  >("cyberPunk");
 
   useEffect(() => {
+    const initialWindowWidth = window.innerWidth;
+
+    if (initialWindowWidth < 640) {
+      setNavVariant("mobile");
+    }
+
     const handleScroll = () => {
       const scrollY = window.scrollY;
+      const windowWidth = window.innerWidth;
 
-      if (scrollY > maxScroll) {
-        setNavVariant("regular");
+      if (windowWidth >= 640) {
+        if (scrollY > maxScroll) {
+          setNavVariant("regular");
+        } else {
+          setNavVariant("cyberPunk");
+        }
       } else {
-        setNavVariant("cyberPunk");
+        setNavVariant("mobile");
       }
     };
 

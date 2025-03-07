@@ -38,6 +38,10 @@ module.exports = {
         astroid: ["astroid"],
         fixedsys: ["fixedsys"],
       },
+      backgroundSize: {
+        'scale-out': '200%',
+        'scale-in': '50%',
+      },
       backgroundImage: {
         defaultCyberPunk:
           "url('../public/resources/pictures/portfolioBackground.jpg')",

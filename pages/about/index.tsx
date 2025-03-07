@@ -45,7 +45,7 @@ export default function DocsPage() {
           <div
             ref={ref1}
             className={`
-              ${title()}
+              ${title({ size: "mdXs" })}
               text-[#f6f6f6] h-fit animate-typewriter ease-in-out overflow-hidden whitespace-nowrap ${!inView3 && "border-r-2 border-slate-300"} w-fit`}
           >
             {inView1 && "...because life is too short to just code."}

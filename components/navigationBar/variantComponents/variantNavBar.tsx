@@ -4,6 +4,10 @@ import { extendVariants } from "@heroui/react";
 export const VariantNavBar = extendVariants(Navbar, {
   variants: {
     design: {
+      mobile: {
+        base: ["ease-in-out"],
+        wrapper: ["flex", "justify-center", "gap-10", "mt-[2vh]"],
+      },
       cyberPunk: {
         base: [
           "backdrop-filter-none",

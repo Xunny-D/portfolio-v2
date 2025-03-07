@@ -18,7 +18,7 @@ export default function IndexPage() {
         {isPageLoaded && (
           <Fragment key={pageKeys.mainPage}>
             <section
-              className={`flex justify-center w-fit fixed top-[69%] left-1/2 transform -translate-x-1/2`}
+              className={`flex justify-center w-fit fixed mt-[62vh] left-1/2 transform -translate-x-1/2`}
             >
               <div className="animate-typewriterSlow ease-in-out overflow-hidden whitespace-nowrap border-r-2 border-slate-300 h-fit">
                 <div className={title() + " text-neutral-300"}>
