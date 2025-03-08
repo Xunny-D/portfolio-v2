@@ -41,7 +41,7 @@ export default function PersonalProjectsExp({
           <>
             <Card className="border-small border-default-200 hover:shadow-lg hover:shadow-default-500 hover:transition-shadow transition-all ease-in-out will-change-transform">
               <CardBody className="bg-black w-fit h-fit">
-                <video autoPlay loop muted className="scale-105">
+                <video autoPlay loop muted playsInline className="scale-105">
                   <source
                     src="/resources/videos/PortfolioV1_Demo.mp4"
                     type="video/mp4"
@@ -54,7 +54,7 @@ export default function PersonalProjectsExp({
             </Card>
             <Card className="bg-black max-h-fit border-small border-default-200 hover:shadow-lg hover:shadow-default-500 hover:transition-shadow transition-all ease-in-out will-change-transform">
               <CardBody className="bg-black">
-                <video autoPlay loop muted className="h-[75vh]">
+                <video autoPlay loop muted playsInline className="h-[75vh]">
                   <source
                     className="bg-black "
                     src="/resources/videos/LongboardDemo.mp4"

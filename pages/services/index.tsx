@@ -39,13 +39,17 @@ export default function DocsPage() {
           <div
             ref={ref1}
             className={`
-              ${title()}
+              ${title({ size: "mdSmaller" })}
                text-[#f6f6f6] h-fit animate-typewriter ease-in-out overflow-hidden whitespace-nowrap ${!inView3 && "border-r-2 border-slate-300"} w-fit`}
           >
             {inView1 && (
               <>
                 Here&apos;s a menu of my{" "}
-                <span className={title() + " text-[#ef4742]"}>services</span>
+                <span
+                  className={title({ size: "mdSmaller" }) + " text-[#ef4742]"}
+                >
+                  services
+                </span>
               </>
             )}
           </div>
@@ -55,7 +59,7 @@ export default function DocsPage() {
           />
         </section>
         <section
-          className={`flex flex-col gap-[8vh] items-center w-fit mx-auto mt-[30vh]`}
+          className={`flex flex-col gap-[8vh] items-center w-fit mx-auto mt-[5vh] sm:mt-[30vh]`}
         >
           <ServicesMenu
             inViewPropOne={inView3}

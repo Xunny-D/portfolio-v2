@@ -26,13 +26,13 @@ export default function DocsPage() {
   });
 
   const { ref: ref4, inView: inView4 } = useInView({
-    threshold: 1,
+    threshold: 0.9,
     triggerOnce: true,
     rootMargin: "0px 0px -100px 0px",
   });
 
   const { ref: ref5, inView: inView5 } = useInView({
-    threshold: 0.2,
+    threshold: 0.1,
     triggerOnce: true,
   });
 

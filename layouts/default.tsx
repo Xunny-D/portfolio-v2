@@ -29,7 +29,7 @@ export default function DefaultLayout({ children }: { children: ReactNode }) {
       switch (children.key) {
         case pageKeys.mainPage:
           setPageBackground(
-            "bg-hello sm:bg-cover sm:bg-[center_bottom_100px] md:bg-[center_bottom_120px] lg:bg-[center_bottom_80px] xl:bg-bottom bg-scale-out bg-contain bg-center h-screen bg-no-repeat",
+            "bg-hello sm:bg-cover sm:bg-[center_bottom_100px] md:bg-[center_bottom_120px] lg:bg-[center_bottom_80px] xl:bg-bottom bg-scale-out bg-contain bg-center h-[70vh] sm:h-screen bg-no-repeat",
           );
           break;
         case pageKeys.portfolioPage:
@@ -39,7 +39,7 @@ export default function DefaultLayout({ children }: { children: ReactNode }) {
           break;
         case pageKeys.servicesPage:
           setPageBackground(
-            "bg-forHire bg-[#090a0c] bg-[center_25vh] sm:bg-[center_20vh] lg:bg-[center_10vh] xl:bg-[center_5vh] 2xl:bg-[center_1vh] bg-no-repeat bg-contain sm:bg-scale-in h-fit",
+            "bg-forHire bg-[#090a0c] bg-[center_25vh] sm:bg-[center_20vh] lg:bg-[center_10vh] xl:bg-[center_5vh] 2xl:bg-[center_1vh] bg-no-repeat bg-contain sm:bg-scale-in sm:h-fit",
           );
           break;
         case pageKeys.aboutPage:
