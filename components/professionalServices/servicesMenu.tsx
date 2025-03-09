@@ -53,7 +53,7 @@ export default function ServicesMenu({
                 </h4>
               </CardHeader>
               <Divider className="bg-default-200" />
-              <CardBody className="bg-black w-fit sm:text-lg px-[1em] sm:px-[2vw] h-full overflow-visible">
+              <CardBody className="bg-black w-fit sm:text-lg px-[2em] sm:px-[4vw] xl:px-[2vw] h-full overflow-visible">
                 {servicesDescription.landingPageDescription}
               </CardBody>
               <Divider className="bg-default-200" />
@@ -73,7 +73,7 @@ export default function ServicesMenu({
                 </h4>
               </CardHeader>
               <Divider className="bg-default-200" />
-              <CardBody className="bg-black h-full overflow-visible w-fit sm:text-lg px-[1em] sm:px-[2vw]">
+              <CardBody className="bg-black h-full overflow-visible w-fit sm:text-lg px-[2em] sm:px-[4vw] xl:px-[2vw]">
                 {servicesDescription.customSoftwareHardwareDescription}
               </CardBody>
               <Divider className="bg-default-200" />

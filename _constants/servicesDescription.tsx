@@ -1,6 +1,6 @@
 const servicesDescription: { [key: string]: JSX.Element } = {
   landingPageDescription: (
-    <ul className="list-disc list-outside flex flex-col text-left text-wrap space-y-[1.5vh] px-[1vw]">
+    <ul className="list-disc list-outside flex flex-col text-left text-wrap space-y-[1.5vh] px-[0.5vw]">
       <li>
         Peronsonally procured UI/UX, tech stack, and features as per your needs.
       </li>
@@ -9,7 +9,7 @@ const servicesDescription: { [key: string]: JSX.Element } = {
     </ul>
   ),
   customSoftwareHardwareDescription: (
-    <ul className="list-disc list-outside flex flex-col text-left text-wrap space-y-[1.5vh] px-[1vw]">
+    <ul className="list-disc list-outside flex flex-col text-left text-wrap space-y-[1.5vh] px-[0.5vw]">
       <li>
         I will closely collaborate with you to understand your business needs,
         goals, and target audience.
